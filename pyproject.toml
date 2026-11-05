@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sim-efficiency-monitor"
+version = "0.2.1"
+description = "Simulation wall-time and normalized resource-efficiency monitor"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["psutil>=5.9,<8"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: System :: Monitoring",
+]
+
+[project.optional-dependencies]
+nvidia = ["nvidia-ml-py>=12,<14"]
+dev = ["pytest>=8,<10", "build>=1,<2", "setuptools>=77"]
+
+[project.scripts]
+sim-monitor = "sim_efficiency_monitor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

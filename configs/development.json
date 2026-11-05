@@ -1,0 +1,11 @@
+{
+  "scene_id": "GAUGE-development",
+  "team_id": "anonymous",
+  "engine": "your-engine",
+  "engine_version": "your-version",
+  "sample_interval_s": 0.2,
+  "gpu_devices": ["all"],
+  "rtf_threshold": null,
+  "cres_threshold": null,
+  "wall_time_limit_s": null
+}
