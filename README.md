@@ -72,17 +72,4 @@ python -m build
 
 测试不需要真实 GPU 或仿真引擎，CI 在 Windows / Python 3.12 与 Linux / Python 3.10 上执行测试和构建。实际引擎与 GPU 驱动兼容性需在目标环境验证。
 
-在 GitHub 创建空仓库，将 `OWNER/REPO` 替换为目标地址后执行：
-
-```bash
-git init
-git add .
-git commit -m "Initial release"
-git branch -M main
-git remote add origin https://github.com/OWNER/REPO.git
-git push -u origin main
-```
-
-GitHub Release 可附上 `dist/` 中的 wheel 和源码发行包。`.gitignore` 已排除运行记录、虚拟环境和构建缓存。
-
 许可证：[MIT](LICENSE)。
